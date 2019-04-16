@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    -webkit-user-select: none;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: white; /*#222935;*/
+    display: none;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden;
+}
+#navBar {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    align-items: center;
+    -webkit-align-items: center;
+    text-align: center;
+    background-color: #0e1e27;
+    height: 100px;
+    border-color: #c4c4c4;
+    border-width: 2px;
+    border-style: none none solid none;
+}
+#logo img {
+    max-height: 80px;
+    margin-left: 10px;
+}
+#navButtons {
+  margin-left: auto;
+  margin-right: 0;
+  height: 100%;
+  display: flex;
+}
+#navBar .navButton {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #c4c4c4;
+    border-radius: 10px;
+    width: 100px;
+    height: 20px;
+    margin: auto 5px;
+}
+#navBar .navButton:hover {
+    background-color: #999999;
+    cursor: pointer;
+}
+#file {
+
+}
+#settings {
+  margin-right: 10px !important;
+}
+#songName {
+    background-color: rgba(0,0,0,0) !important;
+    cursor: default !important;
+    width: 150px !important;
+}
+#songName .container {
+    cursor: pointer;
+}
+#songName .text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 120px;
+    text-align: right;
+}
+#songName span.edit-text-icon {
+    visibility: hidden;
+}
+#navBar:hover span.edit-text-icon {
+    visibility: visible;
+}
+#songName input.edit-text {
+    display: none;
+    text-align: left;
+}
+#middle {
+  height: calc(100vh - 80px - 100px);
+  position: relative;
+}
+#trackSidebar {
+  background-color: #0e1e27;
+  width: 20vw;
+  height: 100%;
+  background-color: #0e1e27;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: none solid solid none;
+}
+#trackSidebar .header {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: none none solid none;
+  display: flex;
+}
+#trackSidebar .header span {
+  margin: auto;
+}
+#trackSidebar .container {
+  overflow-y: scroll;
+  height: calc(100% - 40px);
+}
+#trackSidebar .track {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: none none solid none;
+  display: flex;
+}
+#addNewTrack {
+
+}
+#addNewTrack:hover {
+  background-color: #000123;
+  cursor: pointer;
+}
+#addNewTrack span {
+  margin: auto;
+}
+#trackMaps {
+  min-width: calc(80vw - 2px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(20vw + 2px);
+  background-color: #0e1e27;
+  overflow-x: scroll;
+}
+#trackMaps .header {
+  height: 40px;
+  width: 100%;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: none none solid none;
+}
+#beatBar {
+  height: 100%;
+}
+#seeker {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+#seekerHead {
+  width: 17px;
+  height: 40px;
+  left: -8px;
+  position: absolute;
+}
+#seeker polygon {
+  fill: white;
+  stroke-width:0px;
+}
+#seekerLine {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  height: calc(100vh - 80px - 100px);
+  width: 2px;
+  background-color: white;
+}
+#beatNumbers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: none none solid none;
+}
+#trackMaps .container {
+  width: calc(80vw - 2px);
+}
+#trackMaps .trackMap {
+  height: 100px;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: none none solid none;
+}
+#trackMaps .trackMap .waveform > wave {
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: none solid none solid;
+  border-radius: 10px;
+  background-color: black;
+}
+#trackTypeSelector {
+  display: none;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 70vw;
+  height: 70vh;
+  background-color: black;
+  color: white;
+  z-index: 100;
+}
+#trackTypeSelector .header {
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 40px;
+}
+#trackTypeSelector .header .buttons {
+  margin-left: auto;
+  margin-right: 5px;
+  height: 100%;
+  display: flex;
+}
+#trackTypeSelector .header .buttons .button {
+  display: inline-block;
+  margin: auto 5px;
+  text-align: center;
+}
+#trackTypeSelector .header .close {
+  font-size: 30px;
+  margin-right: 0;
+  width: 40px;
+}
+#trackTypeSelector .header .close:hover {
+  cursor: pointer;
+}
+#trackTypeSelector .header .close span {
+  margin: auto;
+  color: rgb(236, 61, 65);
+  outline-color: white;
+}
+#trackTypeSelector .title {
+  width: 100%;
+  text-align: left;
+}
+#trackTypeSelector .title .text {
+  margin-right: auto;
+  margin-left: 30px;
+}
+#trackEditor {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  bottom: 0;
+  background-color: black;
+}
+#footer {
+  height: 80px;
+  width: 100vw;
+  background-color: #0e1e27;
+  border-color: #c4c4c4;
+  border-width: 2px;
+  border-style: solid none none none;
+  display: flex;
+}
+#seekerButtons {
+  display: flex;
+  margin: auto;
+}
+#seekerButtons .container {
+  margin: auto 10px;
+}
+#time {
+  display: flex;
+  font-size: 30px;
+  margin-right: 20px;
+}
+#time .description {
+  margin: auto;
+}
+#play {
+  height: 100%;
+  font-size: 10px;
+  display: flex;
+}
+#play .button {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+}
+#play .button:hover {
+  cursor: pointer;
+}
+#play span {
+  margin: auto;
+  color: red;
+}
+#pause {
+  height: 100%;
+  font-size: 10px;
+  display: flex;
+}
+#pause .button {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+}
+#pause .button:hover {
+  cursor: pointer;
+}
+#pause span {
+  margin: auto;
+  color: black;
+}
+#backward {
+  height: 100%;
+  font-size: 10px;
+  display: flex;
+}
+#backward .button {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+}
+#backward .button:hover {
+  cursor: pointer;
+}
+#backward span {
+  margin: auto;
+  padding-right: 5px;
+  color: black;
+}
+#forward {
+  height: 100%;
+  font-size: 10px;
+  display: flex;
+}
+#forward .button {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+}
+#forward .button:hover {
+  cursor: pointer;
+}
+#forward span {
+  margin: auto;
+  padding-left: 5px;
+  color: black;
+}
+#volumeSliderContainer {
+  width: 200px;
+  text-align: center;
+  font-size: 15px;
+}
+#speedSliderContainer {
+    width: 200px;
+    text-align: center;
+    font-size: 15px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-top: 20px;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+.slider::-moz-speedrange-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+/*
+.speedSlider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.speedSlider:hover {
+  opacity: 1;
+}
+
+.speedSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.speedSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+.speedSlider::-moz-speedrange-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+}
+*/

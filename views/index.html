@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editor</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css">
+  <link rel='shortcut icon' type='image/x-icon' href='./images/mixtous_logo.ico' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.8.4/Tone.js"></script>
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="body">
+  <div id="navBar">
+    <div id="logo">
+      <img src="./images/mixtous_logo_silver.png">
+    </div>
+    <div id="navButtons">
+      <div id="songName" class="navButton">
+        <div class="container">
+          <span class="text">
+            Song Name
+          </span>
+          <span class="edit-text-icon">
+            <i class="fa fa-edit"></i>
+          </span>
+        </div>
+        <input type="text" class="edit-text" maxlength="100">
+      </div>
+      <div id="file" class="navButton">
+        <span>
+          File
+        </span>
+        <div class="menu">
+
+        </div>
+      </div>
+      <div id="settings" class="navButton">
+        <span>
+          Settings
+        </span>
+        <div class="menu">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="middle">
+
+    <div id="trackSidebar">
+      <div class="header">
+        <span>
+          Tracks
+        </span>
+      </div>
+      <div class="container">
+        <div id="trackList">
+          <div id="trackTemplate" class="track hidden">
+            <div class="trackName">
+              <span>
+
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="addNewTrack" class="track">
+          <span>
+            Add New Track
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="trackMaps">
+      <div class="header">
+        <div id="beatBar">
+          <div id="seeker">
+            <canvas id="beatNumbers"></canvas>
+            <div id="seekerHead">
+              <svg width="17" height="40">
+                <polygon points="0,0 17,0 17,20 8.5,40 0,20">
+                </polygon>
+              </svg>
+            </div>
+            <div id="seekerLine">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="trackMapList">
+
+        </div>
+        <div id="trackMapTemplate" class="trackMap invisible">
+          <div class="waveform">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="trackTypeSelector">
+    <div class="header">
+      <div class="buttons">
+        <div class="close button">
+          <span>
+            <i class="fa fa-close"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="title">
+      <div class="text">
+        <span><h1>Make Track</h1></span>
+      </div>
+    </div>
+    <div id="uploadAudio">
+      <input type="file" id="uploadedAudio" accept="audio/x-mpeg" />
+    </div>
+  </div>
+  <div id="trackEditor">
+  </div>
+  <div id="footer">
+    <div id="seekerButtons">
+      <div id="time">
+        <span class="description">
+          <span id="minutes">00</span>:<span id="seconds">00.0</span>
+        </span>
+      </div>
+      <div id="volumeSliderContainer">
+        <input type="range" min="1" max="100" value="100" class="slider" id="volumeSlider">
+        <p class="description">
+          Master Volume: <span id="volume"></span>
+        </p>
+      </div>
+      <div id="backward" class="container">
+        <div class="button">
+          <span><i class="fa fa-backward"></i></span>
+        </div>
+      </div>
+      <div id="play" class="container">
+        <div class="button">
+          <span><i class="fa fa-play"></i></span>
+        </div>
+      </div>
+      <div id ="pause" class="container">
+        <div class="button">
+          <span><i class="fa fa-pause"></i></span>
+        </div>
+      </div>
+      <div id="forward" class="container">
+        <div class="button">
+          <span><i class="fa fa-forward"></i></span>
+        </div>
+      </div>
+      <div id="speedSliderContainer">
+        <input type="range" min="-2" max="2" value="0" class="slider" id="speedSlider">
+        <p class="description">
+          Playback Speed: <span id="speed"></span>x
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

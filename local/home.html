@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  h1{
+    color:white;
+    text-align:center;
+  }
+  p{color:white;}
+  /*top menu*/
+
+  ul {
+    list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #0e1e27;
+   position: sticky;
+   top: 0;
+
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 18px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #222935;
+  }
+  body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.topnav-right {
+  float: right;
+}
+
+/* top menu end */
+/* hero image */
+.mixtous-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./images/mixtous-space-hero.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  font-size: 200%;
+  text-align:center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+  /* hero image end */
+
+  /*login/signup form*/
+
+/*end login/signup form*/
+
+/*footer*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+/*end footer*/
+
+</style>
+<title>Home</title>
+</head>
+<body style="background-color:#0e1e27">
+  <ul>
+    <div id="logo">
+      <img style="max-height:80px; margin-bottom:-70px; margin-top:0px" src="./images/mixtous_logo_silver.png" onclick="window.location.href = 'home.html';">
+    </div>
+  <div class="topnav-right">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a class="active" href="#login" id="myBtn" onclick="window.location.href = 'login.html';">Login</a></li>
+  </div>
+  </ul>
+  <div class="mixtous-hero">
+    <div class="hero-text">
+      <h1>Welcome to Mixtous</h1>
+      <p>The Online Audio Mixer</p>
+      <button onclick="window.location.href = ' index.html';">Start Mixing!</button>
+    </div>
+  </div>
+  <h1 style="font-size:350%">Welcome to Mixtous</h1>
+  <br></br>
+  <img style="float:right" src="./images/mixtous-hero.jpg" alt="mixtous-blue"  width="50%" hspace="30">
+  <p style="margin-left:30px">
+    The Mixtous Audio Mixer allows for any content creator to combine and edit
+    multiple audio files at the same time. With an intuitive layout for audio
+    controls, users are able to quickly and effectivly alter individual tracks
+    to their preference or all tracks at once.
+  </p>
+  <img style="float:left" src="./images/mixtous-desk-hero.jpg" alt="mixtous-blue"  width="50%" hspace="30" vspace="30">
+  <p style="margin-right:30px; float:right; margin-top:30px">
+    This is text explaining how the Mixtous Audio editor works with audio.
+  </p>
+  <br></br>
+
+</body>
+</html>

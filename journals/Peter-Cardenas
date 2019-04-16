@@ -1,0 +1,57 @@
+27 March 2019:
+
+After creating a general mock-up of the design of the website, I have created the HTML code to model it. More specific views 
+of features, such as the track selection window, piano, and percussion board, will need to be specified in a later mockup. 
+The functionality of these windows also depends on the implementation of Tone.js. This means I will have to read the 
+documentation to develop an understanding that enables me to at least play the piano. I have also set up a domain and 
+PostgreSQL with heroku to test out user functionality. Before we save anything to the database, this also depends on how the 
+tracks are stored, which also depends on my understanding of the Tone.js library. For the next journal check, I plan to have 
+the add track feature implemented with at least the piano instrument.
+
+29 March 2019:
+
+From the check, we have decided on having uploaded audio as the first track option rather than attempting to implement 
+Tone.js for instrumental tracks. I am still familiarizing myself with the documentation on using audio and on how to store 
+track information. For next time, I will decide on how to display the audio as waveform using WaveSurfer.js, and possibly 
+making a basic seeker with pause and play.
+
+2 April 2019:
+
+I have implemented the use of waveform.js. Now, when you upload audio from your disk drive, it will be shown as a waveform
+as a new track. I had some trouble with deselecting the track type selector, but now, it works. I am currently working on a 
+play and pause feature that will play and pause all created tracks. There are methods in WaveSurfer.js that allow me to pause
+and play, so this should not be difficult. I will need to focus on creating the seeker correctly.
+
+4 April 2019:
+
+I have implemented a seeker that moves according to the play and pause buttons. I have also made all tracks play and pause
+according to the play and pause buttons. The tracks will play unconditionally, so I will need to add a check in the track 
+class according the track duration. I will work on this next time, and I might also optimize the code so that changing of 
+track HTML elements is within the constructor of the track class, as well as creating different JavaScript files to make the
+code more modular. I will also attempt to add a functionality for a click event to move the seeker.
+
+
+10 April 2019:
+
+I have allowed the seeker bar to update its length in accordance to the length of added tracks. I have also implemented 
+the backward button that changes the scrollLeft of the track map container, the seeker, and the displayed time to its 
+initial values, but it does not call the pause method. I am still not sure if I should implement pause or not,
+but I will be sure to implement it in settings as something the user can change. I am also not sure about whether I want
+to make the play and pause feature into one button because most recorders use one button for play and pause. I am 
+currently working to match the speed of the seeker marker to the speed of the imported music, so that I can implement a 
+feature that allows users to click on the track map container and move the seeker marker to the location clicked. I have
+made the update method for moving the seeker marker and changing the time update faster, which has decreased the latency
+to 20 ms. I am not sure if this is enough to be satisfied with, but I am sure user testing will expose the true nature
+of this issue. I will be implementing the click to move seeker marker feature for next time in tandem with moving the 
+seeker marker at the same speed as the playback speed of the imported music. I have also found a bug in which when a new
+track is added, the full wave is hidden beyond the length of the previous track. I also plan to find the cause of this bug.
+
+12 April 2019:
+
+I have made the length of the waveform in accordance with the seeker speed, so when the seeker goes to the end of the 
+waveform, the song ends. I have also added a feature that allows you to move the seeker by clicking on any location of the 
+track map which will then update the beat counter and time. Yet, when the seeker is moving, clicking will not update the
+position of the seeker and time correctly. I will have to examine this bug more and fix it for presentation.
+I have also added some internal checks on the track class for playing, so that the track does not play when the time
+for it to play has not started and the time for it to end has not passed. I have also looked into draggable libraries to 
+enable the dragging of each track, but I will still need to look into the bug from the previous track.

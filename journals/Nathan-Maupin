@@ -1,0 +1,85 @@
+3/19/19
+Formed team with Peter Cardenas
+Project Name: Mixtous
+  -Audio Maker and Editor
+Setting up files in github 
+Setting up core values and basci concepts for application
+Roles:
+  -Lead Developer: Peter Cardenas
+  -UI Director: Nathan Maupin
+
+3/20/19
+Worked on functionality ideas
+  -possible functions of site
+  -Need to prioritze main functions for site
+    -Due to time period restraint
+
+3/26/19
+Completed Layout Mockup for Application
+  - Sets up for bare bones set-up and allows for flexibility in functionality
+  -footer expanded to cover entire bottom of page
+  -Will begin expanding on possible functionalities and priorities
+    -New updated mockup
+
+2/27/19
+    We have just completed setting up a domain for hosting the application at www.mixtous.herokuapp.com in order for the 
+  application to be available for UI testing with testers at a later date. The UI layout for the editor mode of the 
+  application has been set up in order to allow for the addition of buttons such as play, pause, import, export, save, etc.
+  I have managed to set up my terminal on my personal computer in order to gain access to the script of the application in 
+  order to alter portions of the application and make UI adjustments as deemed necessary. We are planning to incorporate 
+  wavesurfer.js in order to provide a visual representation of audio that the user imports into the application and that will
+  be dynamic to the modifications that the user applies to the audio files. We are also planning to incorporate tone.js in 
+  order to be able to more easily modify audio files based on frequency, speed, etc. We are hoping to have the capability for
+  displaying imported audio files within the next 1-2 weeks and be ready for bare-bones UI testing within the next 3 weeks.  
+
+3/29/19
+   I have completed the mockup concerning the audio production for the applicaiton. Upon selecting to add an audio file the
+   user will be granted the option to import an audio file from their own device, record directly from their device, or create
+   a file from the instruments provided on the panel. We have allowed for the importing of audio, but we will have to wait for 
+   wavesurfer.js to be uploaded for waveform to work before UI testing of the track feature will begin. Our goal is to have at 
+   the minimum an application that can allow for the importation of multiple audio file and then export all the files as a 
+   single audio file. Considering any available alloted time we will allow for the editing of individual audio files through 
+   the implementation of tone.js
+   
+4/2/19
+  I have added buttons for playback capability such as play, pause, forward, and backward to allow for the playback of all 
+  audio files in a single track. Both Peter and I are also looking into implementing howler.js in order to replace the 
+  existing wavesurfer.js for a more attractive and professional appearance and to add more playback format capabilities.
+  Currently we are able to upload multiple files onto a single track, but we are looking into the capability of removing audio
+  from a track if necessary. I have also changed the overall font of the application in order to correlate with the appearance 
+  of the both the logo and the overall styling of the application. We are expecting to have the capacity to upload and playback
+  audio by the end of 4/4/19 and we will then move onto implementing the ability to export multiple audio files as a single 
+  track under the MP3 format, like the current version that is accepted for uploading.
+
+4/4/19
+  I have added sliders with in the footer, which is the master control pannel, which will allow for the control of the volume 
+  all tracks combined. At a later date, sliders will be added to each individual audio file to allow for the editing of the
+  volume for individual audio files within a track. A slider has also been added in the master control pannel for adjusting 
+  track's playback speed; which will allow for increasing and decreasing the tempo of the overall track. The application is 
+  now capable of playing and pausing all audio within a track and we will soon be adding the option to play individual audio
+  files within a track. Our goal is to have the capability to upload multiple audio tracks, play and edit playback speed and 
+  volume, and export all audio files under a single track in the MP3 format by 4/12/19. Following the completion of that goal,
+  we will then proceed with implementing tone.js in order to gain the capability to edit individual audio files and the track
+  as a whole.
+  
+4/10/19
+  I have begun building a separate home page for the application to serve as a landing page for new users to gain an insight
+  on the purpose of our product and to hook the user into trying out the application. The user will not be required to sign 
+  up to begin editing a track; however, in order to either save or export a file, the user will be required to register as 
+  an official user with the application. We are considering designing a separate webpage to serve as a CRM that will store 
+  user data sufh as email, name, and audio files; which will be accessed by the main application. The CRM will only be 
+  accessible to admin users in order to ensure the protection of user information. We are also looking into begining to 
+  utilizing tone.js in order to gain the capability to synthesize existing audio files and to begin importing files for 
+  creating custom tracks through instruments. We are also looking into setting up the capability to allow for users to 
+  create custom functions for creating and editing tracks within the application.
+
+4/12/19
+  I have set up the basic format of the home page; which will serve asa landing page for new and existing users to access 
+  the application. In the header menu, there is a login button which will redirect a user to a login form requiring username/
+  email and for a password. In the case that a user forgets his or her password, they will be redirected to another form to 
+  enter the email to their account and a temporary password will be issued. If the user is new to the application, under the 
+  login form, there is a button to sign-up and the user will be redirected to another form requiring an email, username, and
+  password. An account with the application will allow for users to save their progress within the application and to have 
+  more export format options. The homepage will provide users with basic information on the functionality of the application
+  and how to properly utilize it. It provides visuals of the application in action and may provide a video tutorial of the 
+  application if time permits.
